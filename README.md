@@ -9,13 +9,13 @@ This repository contains the solution walkthrough for **cook.bin**, a reverse en
 
 ```bash
 (becem69㉿becemNoCap)-[~]
-└─$ file becem69_2nd_challenge.bin
+└─$ file cook.bin
 ```
 
 Output:
 
 ```
-becem69_2nd_challenge.bin: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=e315333f5cf7cf3e54f4fe61330a54bdceb69fea, for GNU/Linux 4.4.0, stripped
+cook.bin: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=e315333f5cf7cf3e54f4fe61330a54bdceb69fea, for GNU/Linux 4.4.0, stripped
 ```
 
 The binary is:
@@ -31,7 +31,7 @@ The binary is:
 
 ```bash
 (becem69㉿becemNoCap)-[~]
-└─$ strings becem69_2nd_challenge.bin
+└─$ strings cook.bin
 ```
 
 Output:
@@ -141,13 +141,13 @@ This is clearly a **fake flag** meant to mislead the solver.
 
 ```bash
 (becem69㉿becemNoCap)-[~]
-└─$ objdump -s -j .rodata becem69_2nd_challenge.bin
+└─$ objdump -s -j .rodata cook.bin
 ```
 
 Output:
 
 ```
-becem69_2nd_challenge.bin:     file format elf64-x86-64
+cook.bin:     file format elf64-x86-64
 
 Contents of section .rodata:
  2000 01000200 72002f70 726f632f 73656c66  ....r./proc/self
@@ -196,5 +196,6 @@ Alternatively, instead of using the Python script, the encoded bytes can be past
 ```
 becem69_is_4lw4ys_h3r3
 ```
+
 
 **Author : becem69**
